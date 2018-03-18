@@ -122,12 +122,12 @@ $(document).ready(function() {
   }
 
   function handleTaskSubmitRequest(event) {
-  event.preventDefault();
+    event.preventDefault();
 
     var taskTitle = $(this).find('[name="title"]').val();
     var taskContent = $(this).find('[name="content"]').val();
 
-    var requestUrl = apiRoot;
+    var requestUrl = apiRoot + 'createTask';
 
     $.ajax({
       url: requestUrl,
@@ -139,11 +139,7 @@ $(document).ready(function() {
         title: taskTitle,
         content: taskContent
       }),
-      complete: function(data) {
-        if(data.status == 200) {
-          getAllTasks();
-        }
-      }
+      success: getAllTasks
     });
   }
 
