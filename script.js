@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const apiRoot = 'https://salty-gorge-51299.herokuapp.com/v1/task/';
-  const trelloApiRoot = 'https://api.trello.com/1/boards/560bf4298b3dda300c18d09c?fields=name,url&key=664de2ad8d99b2a394c36689d76a23e4&token=c1ea3cc1c9eb325e6e52fec9f464dbab06b81dc74875c12fbeab1cee2de67a6e';
+  const trelloApiRoot = 'https://salty-gorge-51299.herokuapp.com/v1/trello';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
